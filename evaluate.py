@@ -30,25 +30,19 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate():
 
-# 모델 정의
     model = SBDD.SBDD(num_points=cfg.NUM_POINTS,output_dim=cfg.FEATURE_OUTPUT_DIM)
     model = model.to(device)
 
-# 체크포인트 파일 경로
     resume_filename = cfg.LOG_DIR + cfg.MODEL_FILENAME
     print("Resuming From ", resume_filename)
 
-# 체크포인트 로드
     checkpoint = torch.load(resume_filename, map_location=device)
     saved_state_dict = checkpoint['state_dict']
 
-# state_dict를 모델에 적용
     model.load_state_dict(saved_state_dict)
 
-# DataParallel 적용
     model = nn.DataParallel(model)
 
-# 모델 평가
     print(evaluate_model(model))
 
 
