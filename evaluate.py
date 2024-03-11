@@ -21,7 +21,6 @@ from loading_pointclouds import *
 import models.SBDD as SBDD
 from tensorboardX import SummaryWriter
 
-
 import config as cfg
 
 cudnn.enabled = True
@@ -31,23 +30,28 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate():
 
+# 모델 정의
     model = SBDD.SBDD(num_points=cfg.NUM_POINTS,output_dim=cfg.FEATURE_OUTPUT_DIM)
     model = model.to(device)
 
+# 체크포인트 파일 경로
     resume_filename = cfg.LOG_DIR + cfg.MODEL_FILENAME
     print("Resuming From ", resume_filename)
 
+# 체크포인트 로드
     checkpoint = torch.load(resume_filename, map_location=device)
     saved_state_dict = checkpoint['state_dict']
 
+# state_dict를 모델에 적용
     model.load_state_dict(saved_state_dict)
 
+# DataParallel 적용
     model = nn.DataParallel(model)
-    one_per,one= evaluate_model(model)
-    print(one)
-    print(one_per)
-    return one_per, one
-    
+
+# 모델 평가
+    print(evaluate_model(model))
+
+
 def evaluate_model(model):
     DATABASE_SETS = get_sets_dict(cfg.EVAL_DATABASE_FILE)
     QUERY_SETS = get_sets_dict(cfg.EVAL_QUERY_FILE)
@@ -102,8 +106,7 @@ def evaluate_model(model):
         output.write("Average Top 1% Recall:\n")
         output.write(str(ave_one_percent_recall))
 
-    return ave_one_percent_recall,ave_recall[0]
-
+    return ave_one_percent_recall
 
 
 def get_latent_vectors(model, dict_to_process):
@@ -232,7 +235,7 @@ if __name__ == "__main__":
     #BATCH_SIZE = FLAGS.batch_size
     #cfg.EVAL_BATCH_SIZE = FLAGS.eval_batch_size
     cfg.NUM_POINTS = 4096
-    cfg.FEATURE_OUTPUT_DIM = 1024
+    cfg.FEATURE_OUTPUT_DIM = 512
     cfg.EVAL_POSITIVES_PER_QUERY = FLAGS.positives_per_query
     cfg.EVAL_NEGATIVES_PER_QUERY = FLAGS.negatives_per_query
     cfg.DECAY_STEP = FLAGS.decay_step
@@ -240,8 +243,8 @@ if __name__ == "__main__":
 
     cfg.RESULTS_FOLDER = FLAGS.results_dir
 
-    cfg.EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/university_evaluation_database.pickle'
-    cfg.EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/university_evaluation_query.pickle'
+    cfg.EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
+    cfg.EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
 
     cfg.LOG_DIR = 'log/'
     cfg.OUTPUT_FILE = cfg.RESULTS_FOLDER + 'results.txt'

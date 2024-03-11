@@ -44,8 +44,8 @@ LOSS_IGNORE_ZERO_BATCH = False
 EVAL_BATCH_SIZE = 2
 EVAL_POSITIVES_PER_QUERY = 4
 EVAL_NEGATIVES_PER_QUERY = 12
-EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/university_evaluation_database.pickle'
-EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/university_evaluation_query.pickle'
+EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
+EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
 
 
 
