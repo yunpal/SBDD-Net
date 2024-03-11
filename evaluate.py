@@ -229,7 +229,7 @@ if __name__ == "__main__":
     #BATCH_SIZE = FLAGS.batch_size
     #cfg.EVAL_BATCH_SIZE = FLAGS.eval_batch_size
     cfg.NUM_POINTS = 4096
-    cfg.FEATURE_OUTPUT_DIM = 512
+    cfg.FEATURE_OUTPUT_DIM = 1024
     cfg.EVAL_POSITIVES_PER_QUERY = FLAGS.positives_per_query
     cfg.EVAL_NEGATIVES_PER_QUERY = FLAGS.negatives_per_query
     cfg.DECAY_STEP = FLAGS.decay_step
