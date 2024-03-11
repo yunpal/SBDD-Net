@@ -8,7 +8,7 @@ LOG_DIR = 'log/'
 MODEL_FILENAME = "model.ckpt"
 
 
-DATASET_FOLDER = '/data/soomoklee/data/benchmark_datasets/'
+DATASET_FOLDER = '/mnt/data/benchmark_datasets/'
 
 # TRAIN
 BATCH_NUM_QUERIES = 2
@@ -30,8 +30,8 @@ BN_DECAY_CLIP = 0.99
 
 RESUME = False
 
-TRAIN_FILE = '/data/soomoklee/queries/oxford/generating_queries/training_queries_baseline.pickle'
-TEST_FILE = '/data/soomoklee/queries/oxford/generating_queries/test_queries_baseline.pickle'
+TRAIN_FILE = '/mnt/queries/oxford/generating_queries/training_queries_baseline.pickle'
+TEST_FILE = '/mnt/queries/oxford/generating_queries/test_queries_baseline.pickle'
 
 
 # LOSS
@@ -44,8 +44,8 @@ LOSS_IGNORE_ZERO_BATCH = False
 EVAL_BATCH_SIZE = 2
 EVAL_POSITIVES_PER_QUERY = 4
 EVAL_NEGATIVES_PER_QUERY = 12
-EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
-EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
+EVAL_DATABASE_FILE ='/mnt/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
+EVAL_QUERY_FILE = '/mnt/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
 
 
 

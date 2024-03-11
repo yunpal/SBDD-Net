@@ -67,7 +67,7 @@ parser.add_argument('--triplet_use_best_positives', action='store_true',
                     help='If present, use best positives, otherwise use hardest positives')
 parser.add_argument('--resume', action='store_true',
                     help='If present, restore checkpoint and resume training')
-parser.add_argument('--dataset_folder', default='/data/soomoklee/data/benchmark_datasets',
+parser.add_argument('--dataset_folder', default='/mnt/data/benchmark_datasets',
                     help='PointNetVlad Dataset Folder')
 
 FLAGS = parser.parse_args()
@@ -91,8 +91,8 @@ cfg.TRIPLET_USE_BEST_POSITIVES = FLAGS.triplet_use_best_positives
 cfg.LOSS_LAZY = FLAGS.loss_not_lazy
 cfg.LOSS_IGNORE_ZERO_BATCH = FLAGS.loss_ignore_zero_batch
 
-cfg.TRAIN_FILE = '/data/soomoklee/queries/oxford/generating_queries/training_queries_baseline.pickle'
-cfg.TEST_FILE = '/data/soomoklee/queries/oxford/generating_queries/test_queries_baseline.pickle'
+cfg.TRAIN_FILE = '/mnt/queries/oxford/generating_queries/training_queries_baseline.pickle'
+cfg.TEST_FILE = '/mnt/queries/oxford/generating_queries/test_queries_baseline.pickle'
 
 
 

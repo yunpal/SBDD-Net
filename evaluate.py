@@ -228,7 +228,7 @@ if __name__ == "__main__":
                         help='Decay rate for lr decay [default: 0.8]')
     parser.add_argument('--results_dir', default='results/',
                         help='results dir [default: results]')
-    parser.add_argument('--dataset_folder', default='/data/soomoklee/data/benchmark_datasets',
+    parser.add_argument('--dataset_folder', default='/mnt/data/benchmark_datasets',
                         help='PointNetVlad Dataset Folder')
     FLAGS = parser.parse_args()
 
@@ -243,8 +243,8 @@ if __name__ == "__main__":
 
     cfg.RESULTS_FOLDER = FLAGS.results_dir
 
-    cfg.EVAL_DATABASE_FILE ='/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
-    cfg.EVAL_QUERY_FILE = '/data/soomoklee/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
+    cfg.EVAL_DATABASE_FILE ='/mnt/queries/oxford/generating_queries/oxford_evaluation_database.pickle'
+    cfg.EVAL_QUERY_FILE = '/mnt/queries/oxford/generating_queries/oxford_evaluation_query.pickle'
 
     cfg.LOG_DIR = 'log/'
     cfg.OUTPUT_FILE = cfg.RESULTS_FOLDER + 'results.txt'
