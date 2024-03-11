@@ -12,10 +12,8 @@ pip install scikit-learn tensorboardx==2.6.2.2
 ```
 
 ### Generate pickle files
-```
-Download benchmark_datasets.zip from [here] (https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D), and then run the following scripts.
-```
 
+Download benchmark_datasets.zip from [here] (https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D), and then run the following scripts.
 
 
 ### For training tuples in our network
@@ -37,10 +35,9 @@ python train.py
 ```
 
 ### Evaluate
+The pre-trained model can be downloaded from [here](https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D). After downloading, it should be placed in the `log` directory.
 ```
 python evaluate.py 
-
-The pre-trained model can be downloaded from [this link](https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D). After downloading, it should be placed in the `log` directory.
 
 ```
 
