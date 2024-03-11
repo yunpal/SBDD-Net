@@ -33,7 +33,7 @@ python train.py
 ```
 
 ### Evaluate
-The pre-trained model can be downloaded from [here](https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D). After downloading, it should be placed in the `log` directory.
+The pre-trained model can be downloaded from [here](https://drive.google.com/file/d/1jnwPcruX3pS3Fo4IeIi-e-s68sADTufL/view?usp=sharing). After downloading, it should be placed in the `log` directory.
 ```
 python evaluate.py 
 ```
