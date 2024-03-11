@@ -3,7 +3,7 @@
 ## Introduction
 This repository is the official implementation for SBDD-Net
 
-## Setting up Environment
+### Setting up Environment
 ```
 conda create -n SBDD python=3.8 
 conda activate SBDD 
@@ -18,13 +18,13 @@ Download benchmark_datasets.zip from [here] (https://drive.google.com/drive/fold
 
 
 
-# For training tuples in our network
+### For training tuples in our network
 ```
 cd generating_queries/
 python generate_training_tuples_baseline.py
 
 ```
-# For test tuples in our network
+### For test tuples in our network
 ```
 cd generating_queries/
 python generate_test_sets.py
@@ -39,6 +39,9 @@ python train.py
 ### Evaluate
 ```
 python evaluate.py 
+
+The pre-trained model can be downloaded from [this link](https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D). After downloading, it should be placed in the `log` directory.
+
 ```
 
 ## References:
