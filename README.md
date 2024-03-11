@@ -1,7 +1,7 @@
 # SBDD-Net: Domain-Invariant 3D Structural Block and Double Descriptor for Place Recognition
 
 ## Introduction
-
+This repository is the official implementation for SBDD-Net
 
 ## Setting up Environment
 ```
@@ -9,11 +9,12 @@ conda create -n SBDD python=3.8
 conda activate SBDD 
 conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 -c pytorch
 pip install scikit-learn tensorboardx==2.6.2.2
-
+```
 
 ### Generate pickle files
+```
 Download benchmark_datasets.zip from [here] (https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D), and then run the following scripts.
-
+```
 
 
 
