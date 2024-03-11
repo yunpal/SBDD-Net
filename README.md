@@ -1,6 +1,6 @@
 # SBDD-Net: Domain-Invariant 3D Structural Block and Double Descriptor for Place Recognition
 
-This repository is the official implementation for SBDD-Net
+This repository is an official implementation for SBDD-Net
 
 ### Setting up Environment
 ```
