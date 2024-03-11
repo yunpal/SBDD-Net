@@ -1,6 +1,5 @@
 # SBDD-Net: Domain-Invariant 3D Structural Block and Double Descriptor for Place Recognition
 
-## Introduction
 This repository is the official implementation for SBDD-Net
 
 ### Setting up Environment
@@ -20,7 +19,6 @@ Download benchmark_datasets.zip from [here](https://drive.google.com/drive/folde
 ```
 cd generating_queries/
 python generate_training_tuples_baseline.py
-
 ```
 ### For test tuples in our network
 ```
@@ -38,7 +36,6 @@ python train.py
 The pre-trained model can be downloaded from [here](https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D). After downloading, it should be placed in the `log` directory.
 ```
 python evaluate.py 
-
 ```
 
 ## References:
