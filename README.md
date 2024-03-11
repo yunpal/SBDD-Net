@@ -3,35 +3,29 @@
 ## Introduction
 
 
-### Pre-Requisites
-* PyTorch 0.4.0
-* tensorboardX
-
-## Dataset preparation
-Download the Used, Oxford, and TUM dataset, and then run the following scripts to prepare the data, for example,
-
+## Setting up Environment
 ```
-cd generating_queries/
+conda create -n SBDD python=3.8 
+conda activate SBDD 
+conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 -c pytorch
+pip install scikit-learn tensorboardx==2.6.2.2
 
-
-# Generate training tuples for the USyd Dataset
-python generate_training_tuples_usyd.py
-
-
-# Generate evaluation tuples for the USyd Dataset
-python generate_test_sets_usyd.py
-```
 
 ### Generate pickle files
-Download the Oxford dataset, and then run the following scripts
-```
-cd generating_queries/
+Download benchmark_datasets.zip from [here] (https://drive.google.com/drive/folders/1Wn1Lvvk0oAkwOUwR0R6apbrekdXAUg7D), and then run the following scripts.
+
+
+
 
 # For training tuples in our network
+```
+cd generating_queries/
 python generate_training_tuples_baseline.py
 
-
-# For network evaluation
+```
+# For test tuples in our network
+```
+cd generating_queries/
 python generate_test_sets.py
 ```
 
