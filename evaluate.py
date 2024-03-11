@@ -215,7 +215,7 @@ if __name__ == "__main__":
                         help='Number of definite negatives in each training tuple [default: 20]')
     parser.add_argument('--eval_batch_size', type=int, default=12,
                         help='Batch Size during training [default: 1]')
-    parser.add_argument('--dimension', type=int, default=256)
+    parser.add_argument('--dimension', type=int, default=1024)
     parser.add_argument('--decay_step', type=int, default=200000,
                         help='Decay step for lr decay [default: 200000]')
     parser.add_argument('--decay_rate', type=float, default=0.7,
