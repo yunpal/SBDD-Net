@@ -91,8 +91,8 @@ cfg.TRIPLET_USE_BEST_POSITIVES = FLAGS.triplet_use_best_positives
 cfg.LOSS_LAZY = FLAGS.loss_not_lazy
 cfg.LOSS_IGNORE_ZERO_BATCH = FLAGS.loss_ignore_zero_batch
 
-cfg.TRAIN_FILE = '/mnt/queries/oxford/generating_queries/training_queries_baseline.pickle'
-cfg.TEST_FILE = '/mnt/queries/oxford/generating_queries/test_queries_baseline.pickle'
+cfg.TRAIN_FILE = '/mnt/generating_queries/training_queries_baseline.pickle'
+cfg.TEST_FILE = '/mnt/generating_queries/test_queries_baseline.pickle'
 
 
 
@@ -324,7 +324,7 @@ def train_one_epoch(model, optimizer, train_writer, loss_function_local,loss_fun
         loss.backward()
         
         optimizer.step()
-        log_string('batch radian_loss: %f' % loss_local)
+        log_string('batch degree_loss: %f' % loss_local)
         log_string('batch distance_loss: %f' % loss_global)
         log_string('batch loss: %f' % loss)
         train_writer.add_scalar("Loss", loss.cpu().item(), TOTAL_ITERATIONS)
