@@ -30,8 +30,8 @@ BN_DECAY_CLIP = 0.99
 
 RESUME = False
 
-TRAIN_FILE = '/mnt/generating_queries/training_queries_baseline.pickle'
-TEST_FILE = '/mnt/generating_queries/test_queries_baseline.pickle'
+TRAIN_FILE =  '/mnt/generating_queries/training_queries_baseline.pickle'
+TEST_FILE =  '/mnt/generating_queries/test_queries_baseline.pickle'
 
 
 # LOSS

@@ -236,7 +236,6 @@ if __name__ == "__main__":
     cfg.DECAY_RATE = FLAGS.decay_rate
 
     cfg.RESULTS_FOLDER = FLAGS.results_dir
-
     cfg.EVAL_DATABASE_FILE ='/mnt/generating_queries/oxford_evaluation_database.pickle'
     cfg.EVAL_QUERY_FILE = '/mnt/generating_queries/oxford_evaluation_query.pickle'
 
